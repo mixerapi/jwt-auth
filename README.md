@@ -166,7 +166,7 @@ class User extends Entity implements JwtEntityInterface
     {
         return new Jwt(
             exp: time() + 60 * 60 * 24,
-            sub: $this->get('id'),
+            sub: (string)$this->get('id'),
             iss: 'mixerapi',
             aud: 'mixerapi-client',
             nbf: null,

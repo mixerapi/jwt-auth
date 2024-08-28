@@ -106,8 +106,8 @@ applying it to your applications authentication.
 public function getAuthenticationService(ServerRequestInterface $request): \Authentication\AuthenticationServiceInterface
 {
     $fields = [
-        \Authentication\Identifier\IdentifierInterface::CREDENTIAL_USERNAME => 'email',
-        \Authentication\Identifier\IdentifierInterface::CREDENTIAL_PASSWORD => 'password',
+        \Authentication\Identifier\AbstractIdentifier::CREDENTIAL_USERNAME => 'email',
+        \Authentication\Identifier\AbstractIdentifier::CREDENTIAL_PASSWORD => 'password',
     ];
 
     $config = new \MixerApi\JwtAuth\Configuration\Configuration();
